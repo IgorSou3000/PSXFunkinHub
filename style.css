@@ -1,0 +1,53 @@
+/* Palette used: https://coolors.co/palette/780000-c1121f-fdf0d5-003049-669bbc*/
+
+body {
+	font-family: system-ui, sans-serif;
+	background-color: white;
+}
+
+hr.solid {
+	border-top: 3px solid #bbb;
+	margin: 0px;
+}
+
+#logo {
+	font-size: 3em;
+}
+.creator {
+	padding-inline: 16px;
+	text-align: center;
+	font-weight: normal;
+	color: white;
+	background-color: #780000;
+}
+
+#mainContainer {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	justify-items: center;
+	align-items: center;
+	text-align: center;
+}
+
+.port img {
+	border: 3px solid transparent;
+	border-radius: 5%;
+}
+
+.port a {
+	color: #669BBC;
+	text-decoration: none;
+}
+
+.port a:hover {
+	color: green;
+	animation-name: link_tween;
+	animation-duration: 0.2s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+
+@keyframes link_tween {
+	0% {font-size: 1rem}
+	100% {font-size: 1.05rem}
+}
