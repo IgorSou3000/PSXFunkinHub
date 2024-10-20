@@ -8,16 +8,22 @@
 	<link rel="icon" href="icon.ico">
 </head>
 <body>
+
 	<header>
 		<h1 id="logo">PSXFunkinHub</h1>
 		<h2>The best place to find and download your favorite PSXFunkin port</h2>
 		<br><br>
-		<h3 id="portsCounter">PSXFunkin Ports Count: </h2>
+		<div class="search-box">
+			<input id="searchbar" onkeyup="searchPort()" type="text" name="search" placeholder=" Search Port..">
+		</div>
 		<hr class="solid">
 	</header>
+
 	<main>
 		<div id="mainContainer">
 		</div>
+		<!-- Dumb way to make sure the screen height will scroll even if it doesn't show any port-->
+		<br><br><br><br><br><br>
 	</main>
 
 <script src="index.js"></script>

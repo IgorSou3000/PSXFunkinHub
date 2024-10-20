@@ -190,11 +190,28 @@ const ports = [
 		creator: 'DreamCastNick',
 	},
 ];
+
 const container = document.getElementById('mainContainer');
 
-const portsCounter = document.getElementById('portsCounter');
-const portsCounterHTML = ports.length;
+/* Find the ports that matches the search*/
+function searchPort() {
+	let input = document.getElementById('searchbar');
+	let filter = input.value.toUpperCase();
+	let mainContainer = document.getElementById('mainContainer');
+	let ports = mainContainer.getElementsByClassName('port');
 
+	for (let i = 0; i < ports.length; i++) {
+		let txtValue = ports[i].textContent || ports[i].innerText;
+		if (txtValue.toUpperCase().indexOf(filter) > -1) {
+			ports[i].style.display = '';
+		}
+		else {
+			ports[i].style.display = 'none';
+		}
+	}
+}
+
+/* Compare the object names in the array to sort them in alphabetical order. */
 function compareByName(a, b) {
 	if (a.name < b.name)
 		return -1;
@@ -219,6 +236,4 @@ function createPortsHTML(container, ports) {
 };
 
 ports.sort(compareByName);
-
 createPortsHTML(container, ports);
-portsCounter.insertAdjacentHTML('beforeend', portsCounterHTML);

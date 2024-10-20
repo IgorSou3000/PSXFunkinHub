@@ -1,32 +1,53 @@
-/* Palette used: https://coolors.co/palette/780000-c1121f-fdf0d5-003049-669bbc*/
-
 body {
 	font-family: system-ui, sans-serif;
 	background-color: white;
 }
 
 hr.solid {
-	margin: 0px;
-	padding: 0px;
+	margin-top: 15px;
 	border-top: 3px solid #bbb;
 }
 
-header h1, header h2 {
-	padding: 0px;
-	margin: 0px;
+header {
 	margin-left: 20px;
 }
 
+header h1 {
+	padding: 0px;
+	margin: 0px;
+}
+
 header h2 {
+	padding: 0px;
+	margin: 0px;
 	font-weight: normal;
+}
+
+header h3 {
+	padding: 0px;
+	margin: 0px;
+}
+
+footer {
+	margin-top: 190px;
+}
+
+#logo {
+	font-size: 2em;
 }
 
 #portsCounter {
 	text-align: center;
 }
 
-#logo {
-	font-size: 2em;
+.search-box {
+	width: 100%;
+  text-align:center;
+}
+
+#searchbar {
+	border: 1px solid gray;
+	border-radius: 5px;
 }
 .creator {
 	text-align: center;
@@ -37,10 +58,11 @@ header h2 {
 
 #mainContainer {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 	justify-items: center;
 	align-items: center;
 	text-align: center;
+	min-height: 350px;
 }
 
 .port img {
@@ -66,3 +88,4 @@ header h2 {
 .port a:hover {
 	color: limegreen;
 	font-size: 1.2rem;
+}
