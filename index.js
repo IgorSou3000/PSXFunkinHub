@@ -30,6 +30,11 @@ const ports = [
 		creator: 'Unstop4ble',
 	},
 	{
+		name: 'VS KAPI - Arcade Showdown',
+		link: 'https://gamebanana.com/mods/331076',
+		creator: 'Unstop4ble',
+	},
+	{
 		name: 'Cyber Sensation',
 		link: 'https://gamebanana.com/mods/345700',
 		creator: 'Unstop4ble',
@@ -164,6 +169,26 @@ const ports = [
 		link: 'https://gamebanana.com/mods/351910',
 		creator: 'BiliousData',
 	},
+	{
+		name: 'VS Bob',
+		link: 'https://gamebanana.com/mods/325016',
+		creator: 'g3yt',
+	},
+	{
+		name: 'VS Shaggy 2.5',
+		link: 'https://gamebanana.com/mods/333528',
+		creator: 'DreamCastNick',
+	},
+	{
+		name: 'Hypno Lullaby',
+		link: 'https://gamebanana.com/mods/334300',
+		creator: 'DreamCastNick',
+	},
+	{
+		name: 'VS Baldi s Basics In Funkin',
+		link: 'https://gamebanana.com/mods/334697',
+		creator: 'DreamCastNick',
+	},
 ];
 const container = document.getElementById('mainContainer');
 
@@ -185,8 +210,9 @@ function createPortsHTML(container, ports) {
 		const portImage = 'img/' + port.name + '.png';
 		const portHTML = `
 		<figure class="port">
-			<img src="${portImage}" alt="${port.name} image" width=300>
-			<figcaption><a href="${port.link}" target="_blank">${port.name}</a></figcaption>`;
+			<img src="${portImage}" alt="${port.name} image">
+			<figcaption><a href="${port.link}" target="_blank">${port.name}</a></figcaption>
+		</figure>`;
 		
 		container.insertAdjacentHTML('beforeend', portHTML);
 	});
